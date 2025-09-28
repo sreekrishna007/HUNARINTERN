@@ -16,7 +16,7 @@ public class NumberGuessingGame{
             int attempts=0;
             int maxAttempts=15;
             while(guess!=targetNumber&&attempts<maxAttempts){
-                System.out.println("Enter your guess:");
+                System.out.println("Enter your guess: ");
                 if(!sc.nextInt()){
                     System.out.println("Please enter a valid number!");
                     sc.next();
@@ -39,19 +39,20 @@ public class NumberGuessingGame{
                     int score=(maxAttempts-attempts+1)*10;
                 }
                 
-                System.out.println("Congratulations You Guessed the number"+targetNumber+"correctly.");
-                System.out.println("You took"+attempts+"attempts to win.");
-                System.out.println("Your score"+score+"points\n");
+                System.out.println("Congratulations You Guessed the number "+targetNumber+" correctly.");
+                System.out.println("You took "+attempts+" attempts to win.");
+                System.out.println("Your score "+score+" points\n");
             }
         }
         if(guess!=targetNumber){
-            System.out.println("You have reached the maximum attempts.The number was:"+targetNumber+"\n");
+            System.out.println("You have reached the maximum attempts.The number was: "+targetNumber+"\n");
         }
-        System.out.println("Do you want to play again? (yes\no):");
+        System.out.println("Do you want to play again? (yes/no):");
         String response=sc.next().trim().toLowerCase();
         playAgain=response.equals("yes")||response.equals("y");
         System.out.println();
     }
     System.out.println("Thanks for playing!");
     sc.close();
+
 }
